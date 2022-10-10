@@ -70,6 +70,7 @@ class Deque(DequeAbstract,LinkedList):
     else:
      primero=self._header.next
      self._header.next=primero.next
+     self._size-= 1
 
  def delete_last(self) -> None:
     if self.is_empty():
@@ -81,5 +82,5 @@ class Deque(DequeAbstract,LinkedList):
          if(siguiente.next==None):
             actual.next=None
          actual=actual.next
-            
+      self._size-=1
 
